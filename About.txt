@@ -1,0 +1,17 @@
+
+
+This is a Python script that creates a simple GUI (Graphical User Interface) application for text encryption and decryption
+using the tkinter module. The application uses a secret key (password) to encrypt and decrypt the text using
+base64 encoding.
+
+The main_screen() function creates the main window of the application and sets up the GUI elements,
+such as text input and buttons for encryption, decryption, and reset.
+
+The encrypt() and decrypt() functions are called when the corresponding buttons are clicked. 
+They first check if the password entered matches the correct password ("1234"), and if not,
+display an error message. If the password is correct, the function encodes or decodes the text using base64 and displays the result in a new window.
+
+The reset() function is called when the reset button is clicked, and it clears the input fields.
+
+Overall, this is a simple script for a basic text encryption and decryption application
+using a password and base64 encoding.

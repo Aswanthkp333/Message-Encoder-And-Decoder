@@ -1,0 +1,18 @@
+Sure! Here are step-by-step instructions for using this program
+
+1. Open your Python IDE and create a new Python file.
+2. Copy and paste the entire code from the provided script into the new Python file.
+3. Save the Python file with a meaningful name such as text-encrypt-decrypt.py.
+4.Copy the "keys.png" file into the same directory as the Python file.
+5. Make sure that you have the tkinter module installed on your system. If not, install it by running pip install tkinter in your terminal or command prompt.
+6. Run the Python script by clicking on the Run or Execute button in your IDE or running python text-encrypt-decrypt.py in your terminal or command prompt.
+7. The program window will appear with two text areas and three buttons.
+8. Enter the text you want to encrypt or decrypt in the top text area.
+9. Enter the secret key (password) in the bottom text area.
+10. Click on the ENCRYPT button to encrypt the text or DECRYPT button to decrypt the text.
+11. If you entered the correct password, a new window will appear with the encrypted or decrypted text.
+12. Click on the RESET button to clear the text areas and start over.
+13. Close the program window to exit the program.
+
+
+Note This program is intended for educational purposes only and should not be used to encrypt sensitive or confidential information as it uses a simple password-based encryption method that is not secure.
